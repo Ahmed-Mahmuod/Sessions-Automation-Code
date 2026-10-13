@@ -24,4 +24,6 @@ public class LoginPage {
         return new SecureAreaPage(driver);
     }
 
+    public static class KeyPressesPage {
+    }
 }
