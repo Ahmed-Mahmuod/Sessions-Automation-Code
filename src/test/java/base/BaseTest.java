@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.List;
 
@@ -35,6 +36,11 @@ public class BaseTest {
 //    public static void main(String[] args) {
 //        BaseTest baseTest = new BaseTest();
 //        baseTest.setup();
+    @BeforeMethod
+    public void goHome() {
+        driver.get("https://the-internet.herokuapp.com/");
+        homePage = new HomePage(driver);
+    }
 
     @AfterClass
     public void tearDown(){
