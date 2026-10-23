@@ -13,4 +13,6 @@ public class SeUitls {
         Select dropdown = new Select(driver.findElement(dropdownLocator));
         dropdown.selectByVisibleText(option);
     }
+
+
 }
